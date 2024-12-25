@@ -9,9 +9,9 @@ class TimerScreen extends StatefulWidget {
 }
 
 class _TimerScreenState extends State<TimerScreen> {
-  int _userInputSeconds = 0; // Stores user-entered duration in seconds
+  int _userInputSeconds = 0; 
   Duration _remaining = const Duration(
-      hours: 0, minutes: 0, seconds: 0); // Initial remaining time
+      hours: 0, minutes: 0, seconds: 0); 
   Timer? _timer;
   bool _isTimerFinished = false;
 
