@@ -44,7 +44,7 @@ class _AlarmScreenState extends State<AlarmScreen> {
   void _deleteAlarm(String alarmId) {
     setState(() {
       _alarms.removeWhere((alarm) => alarm['id'] == alarmId);
-      // Clear alarm triggered flag if the deleted alarm is the triggered one
+     
       if (alarmId == _triggeredAlarmId) {
         _isAlarmTriggered = false;
         _triggeredAlarmId = null;
@@ -60,11 +60,11 @@ class _AlarmScreenState extends State<AlarmScreen> {
           _isAlarmTriggered = true;
           _triggeredAlarmId = _alarms[i]['id'];
         });
-        // TODO: Implement actual alarm logic (e.g., sound, vibration)
+        
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text('Alarm Triggered!'),
-            duration: Duration(seconds: 3), // Adjust duration as needed
+            duration: Duration(seconds: 3), 
           ),
         );
         break;
