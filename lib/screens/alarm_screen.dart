@@ -12,7 +12,7 @@ class AlarmScreen extends StatefulWidget {
 class _AlarmScreenState extends State<AlarmScreen> {
   final List<Map<String, dynamic>> _alarms = [];
   bool _isAlarmTriggered = false;
-  String? _triggeredAlarmId; // Store ID of the triggered alarm
+  String? _triggeredAlarmId; 
 
   Future<void> _addAlarm() async {
     final TimeOfDay? pickedTime = await showTimePicker(
